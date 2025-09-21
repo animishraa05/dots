@@ -4,23 +4,6 @@
 !config/
 
 # Ignore specific files within config/
-config/*/
-!config/i3/
-!config/polybar/
-!config/alacritty/
-!config/dunst/
-!config/rofi/
-!config/kitty/
-!config/picom/
-!config/ranger/
-!config/fish/
-!config/zsh/
-!config/tmux/
-!config/ncmpcpp/
-!config/redshift/
-
-# Add any other specific files or directories you want to ignore
-# For example:
 # *.swp
 # *~
 # *.bak
