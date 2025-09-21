@@ -1,7 +1,6 @@
 # Ignore common temporary files and directories
 *
 !.gitignore
-!config/
 
 # Ignore specific files within config/
 # *.swp
