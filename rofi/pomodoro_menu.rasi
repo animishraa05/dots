@@ -1,0 +1,96 @@
+/*-*- mode: css; -*-*/
+
+/* Pomodoro Menu Theme */
+
+configuration {
+    show-icons: false;
+}
+
+/* global settings and color variables */
+* {
+    maincolor:        #FFFFFF;
+    highlight:        bold #FFFFFF;
+    urgentcolor:      #F5F5F5;
+
+    fg:               #F5F5F5;
+    bg:               rgba(0,0,0,0);
+    blackselect:      rgba(66, 66, 66, 0.9); /* Lighter gray for selection */
+    font: "Noto Sans CJK SC 13.5";
+    background-color: @bg;
+}
+
+window {
+    anchor: center;
+    background-color: @bg;
+    border: 0;
+    border-radius: 0px;
+    margin: 0;
+    padding: 0px;
+    width: 30%;
+    height: 25%;
+}
+
+mainbox {
+    border-radius: 30px;
+    padding: 20px;
+    background-color: rgba(33, 33, 33, 0.95); /* Neutral dark gray background */
+    children: [inputbar, message, listview];
+}
+
+message {
+    padding: 6px 10px;
+    background-color:@bg;
+}
+
+textbox {
+    border-radius: 30px;
+    padding: 20px;
+    background-color: rgba(28,28,28,0.8);
+    text-color:@fg;
+}
+
+listview {
+    columns: 1;
+    fixed-height: false;
+    dynamic: true;
+    scrollbar: false;
+    spacing: 10px;
+    padding: 20px 15px 0px 15px;
+    background: @bg;
+}
+
+element {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+element-text {
+  horizontal-align: 0.5;
+  vertical-align: 0.5;
+  text-color: inherit;
+}
+
+element selected.normal {
+    background-color: @blackselect;
+    text-color:       @fg;
+}
+
+inputbar {
+    padding: 10px;
+    background-color: @bg;
+    spacing: 10px;
+    children: [prompt, entry];
+}
+
+entry {
+    font: "Noto Sans CJK SC Bold 14";
+    background-color:@bg;
+    text-color:@fg;
+    placeholder: "Select a time";
+}
+
+prompt {
+    font: "Noto Sans CJK SC Bold 14";
+    background-color:@bg;
+    text-color:@maincolor;
+}
