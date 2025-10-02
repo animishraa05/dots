@@ -12,17 +12,17 @@ DURATIONS_FILE="/tmp/polybar_pomodoro_durations"
 # Path to the sound file to play upon completion
 # You can change this to any sound file you like.
 # Ensure you have `paplay` installed (usually part of the `pulseaudio` package).
-SOUND_FILE="/usr/share/sounds/freedesktop/stereo/bell.oga"
+SOUND_FILE="/home/ani/go/pkg/mod/github.com/gdamore/tcell/v2@v2.8.1/webfiles/beep.wav"
 
 DEFAULT_WORK=2400   # 40 * 60
 DEFAULT_CHILL=1200  # 20 * 60
 
-# Function to play a sound for 10 seconds
+# Function to play a sound for 15 seconds
 play_sound() {
     if command -v paplay >/dev/null && [ -f "$1" ]; then
         (paplay "$1" &
         PLAYER_PID=$!
-        sleep 10
+        sleep 15
         kill "$PLAYER_PID" 2>/dev/null) &
     fi
 }
@@ -98,7 +98,7 @@ if [ "$CURRENT_STATE" = "work" ]; then
         date +%s > "$START_TIME_FILE"
         REMAINING_TIME=$CHILL_DURATION
         CURRENT_STATE="chill"
-        dunstify -u normal "Pomodoro" "Work session is over! Time to chill."
+        dunstify -u critical "Pomodoro" "Work session is over! Time to chill."
         play_sound "$SOUND_FILE"
     fi
 elif [ "$CURRENT_STATE" = "chill" ]; then
@@ -108,7 +108,7 @@ elif [ "$CURRENT_STATE" = "chill" ]; then
         date +%s > "$START_TIME_FILE"
         REMAINING_TIME=$WORK_DURATION
         CURRENT_STATE="work"
-        dunstify -u normal "Pomodoro" "Chill session is over! Time to get back to work."
+        dunstify -u critical "Pomodoro" "Chill session is over! Time to get back to work."
         play_sound "$SOUND_FILE"
     fi
 fi
