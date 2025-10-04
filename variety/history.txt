@@ -1,4 +1,17 @@
 0
+/home/ani/.config/themes/kanagawa-lotus/wallpaper.png
+/home/ani/.config/themes/evergreen/wallpaper.png
+/home/ani/.config/themes/kanagawa-lotus/wallpaper.png
+/home/ani/.config/themes/gruvbox-hard-dark/wallpaper.png
+/home/ani/walls/flowers/a_close_up_of_a_plant_03.jpg
+/usr/share/backgrounds/gnome/adwaita-l.jxl
+/home/ani/walls/digital/a_group_of_trees_in_a_snowy_field.jpg
+/home/ani/.config/themes/evergreen/wallpaper.png
+/home/ani/.config/themes/kanagawa-lotus/wallpaper.png
+/home/ani/walls/cherry/a_painting_of_a_tree_branch_with_pink_flowers.png
+/home/ani/walls/a_waterfall_in_the_rain.jpg
+/home/ani/walls/nord/a_cartoon_of_a_lamp_post.jpg
+/home/ani/walls/abstract/a_white_lines_on_a_black_background.jpeg
 /home/ani/walls/architecture/a_street_with_buildings_and_a_railing.jpg
 /home/ani/walls/manga/a_black_and_white_image_of_a_man_with_arms_and_arms.jpeg
 /home/ani/walls/anime/a_cartoon_of_a_group_of_children.jpg
@@ -9,7 +22,6 @@
 /home/ani/walls/anime/a_road_with_power_lines_and_power_lines.png
 /home/ani/walls/flowers/a_group_of_white_and_yellow_flowers.png
 /home/ani/walls/anime/water_droplets_on_a_puddle.png
-/usr/share/backgrounds/gnome/adwaita-l.jxl
 /home/ani/walls/monochrome/a_bird_flying_over_a_mountain.jpg
 /home/ani/walls/manga/a_black_and_white_drawing_of_a_person_with_a_black_mask.jpeg
 /home/ani/walls/flowers/a_close_up_of_a_flower_03.jpg
