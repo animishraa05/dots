@@ -1,7 +1,7 @@
 
 [colors.primary]
 background = "#f2ecbc"
-foreground = "#545464"
+foreground = "#000000"
 
 [colors.normal]
 black   = "#000000" # adjust if you want a soft dark tone

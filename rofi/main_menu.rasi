@@ -1,139 +1,110 @@
 /*-*- mode: css; -*-*/
 
 configuration {
-    show-icons: true; 
+    show-icons: true;
 }
 
-/* global settings and color variables */
+/* Inherit colors from the theme */
 * {
-    maincolor:        #50fa7b;
-    highlight:        bold #50fa7b;
-    urgentcolor:      #ff79c6;
-
-    fg:               #f8f8f2;
-    bg:               rgba(0,0,0,0);
-    blackselect:      rgba(74,74,74,0.9);
-    cyan:             #8be9fd;
-    font: "Noto Sans CJK SC 12";
+    font: "JetBrainsMono Nerd Font 14";
+    background-color: rgba(0,0,0,0);
+    text-color: @fg;
 }
 
 window {
     anchor: center;
-    background-color: @bg;
-    border: 0;
-    border-radius: 0px;
-    margin: 0;
-    padding: 0px;
-    width: 38%;
-    height: 53%;
+    width: 40%;
+    height: 60%;
+    border-radius: 20px;
+    background-color: rgba(242,236,188,0.95); /* From your theme */
 }
 
 mainbox {
-    border-radius: 30px;
+    children: [inputbar, listview];
+    spacing: 20px;
     padding: 20px;
-    background-color: rgba(28,28,28,0.8);
-    children: [inputbar, message, listview];
 }
 
-message {
-    padding: 6px 10px;
-    background-color:@bg;
+inputbar {
+    children: [prompt, entry];
+    padding: 12px 16px;
+    border-radius: 12px;
+    background-color: @blackselect; /* From your theme */
 }
 
-textbox {
-    border-radius: 30px;
-    padding: 20px;
-    background-color: rgba(28,28,28,0.8);
-    text-color:@fg;
-    font: "Noto Sans CJK SC 13.5";
+prompt {
+    text-color: @maincolor; /* From your theme */
+    enabled: true;
+    padding: 0 8px 0 0;
+}
+
+entry {
+    placeholder: "Search...";
+    placeholder-color: @fg;
+    text-color: @cyan; /* From your theme */
 }
 
 listview {
+    layout: horizontal;
+    lines: 1;
     columns: 5;
-    fixed-height: false;
-    dynamic: true;
-    scrollbar: false;
-    spacing: 0px;
-    padding: 25px 15px 0px 15px;
-    background: @bg;
+    spacing: 15px;
+    padding: 10px;
+    background-color: transparent;
 }
 
 element {
-  padding: 15px;
-  orientation: vertical;
-  border-radius: 15px;
+    orientation: vertical;
+    padding: 20px 10px;
+    border-radius: 12px;
+    spacing: 10px;
 }
 
 element-icon {
-   size: 53;
-   horizontal-align: 0.5;
-   vertical-align: 0.5; 
+    size: 48px;
+    horizontal-align: 0.5;
 }
 
 element-text {
-  horizontal-align: 0.5;
-  vertical-align: 0.5;
-  text-color: inherit;
+    horizontal-align: 0.5;
+    text-color: inherit;
 }
 
 element normal.normal {
-    padding: 0px 15px;
-    background-color: @bg;
+    background-color: @blackselect;
     text-color: @fg;
 }
 
 element normal.urgent {
-    background-color: @bg;
-    text-color: @urgentcolor;
+    background-color: @urgentcolor;
+    text-color: @bg;
 }
 
 element normal.active {
-    background-color: @bg;
-    text-color: @maincolor;
+    background-color: @maincolor;
+    text-color: @bg;
 }
 
 element selected.normal {
-    background-color: @blackselect;
-    text-color:       @fg;
+    background-color: @maincolor;
+    text-color: @bg;
+    border: 2px solid @cyan;
 }
 
 element selected.urgent {
     background-color: @urgentcolor;
-    text-color:       @bg;
+    text-color: @bg;
 }
 
 element selected.active {
     background-color: @maincolor;
-    text-color:       @bg;
+    text-color: @bg;
 }
 
-element alternate.normal {
-    background-color: @bg;
-    text-color:       @fg;
-}
-
-element alternate.urgent {
-    background-color: @bg;
-    text-color:       @urgentcolor;
-}
-
-element alternate.active {
-    background-color: @bg;
-    text-color:       @maincolor;
-}
-
-inputbar { 
-    padding: 20px 10px 0px 10px;
-    background-color: @bg;
-    spacing: 0px;
-}
-
-entry {
-    font: "Noto Sans CJK SC Bold 14";
-    background-color:@bg;
-    text-color:@fg;
-}
-
-prompt {
-  enabled: false;
+/* Add a hover effect */
+element normal.normal:hover,
+element normal.urgent:hover,
+element normal.active:hover {
+    background-color: @cyan;
+    text-color: @bg;
 }
