@@ -1,11 +1,47 @@
 # Ignore common temporary files and directories
-*
-!.gitignore
+.DS_Store
+Thumbs.db
 
-# Ignore specific files within config/
-# *.swp
-# *~
-# *.bak
-# .DS_Store
-# Thumbs.db
-
+# Ignore specific directories
+alacritty
+autostart
+cava
+chromium
+configstore
+dconf
+dunst
+fastfetch
+fontconfig
+go
+google-chrome
+gtk-2.0
+gtk-3.0
+i3
+JetBrains
+lazygit
+libreoffice
+mpv
+nautilus
+ncspot
+nextjs-nodejs
+nitrogen
+nvim
+obsidian
+picom
+polybar
+pulse
+qBittorrent
+qutebrowser
+rofi
+Ryujinx
+simple-update-notifier
+systemd
+themes
+Thunar
+variety
+vesktop
+vlc
+xfce4
+yay
+yazi
+zathura

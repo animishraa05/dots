@@ -102,9 +102,7 @@ element selected.active {
 }
 
 /* Add a hover effect */
-element normal.normal:hover,
-element normal.urgent:hover,
-element normal.active:hover {
+element:hover {
     background-color: @cyan;
     text-color: @bg;
 }

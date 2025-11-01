@@ -1,0 +1,5 @@
+[Default Applications]
+x-scheme-handler/discord=vesktop.desktop
+
+[Added Associations]
+video/x-matroska=vlc.desktop;
